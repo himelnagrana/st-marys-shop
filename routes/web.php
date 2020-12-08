@@ -15,4 +15,3 @@ use App\Http\Controllers\SMSController;
 */
 
 Route::get('/{any}', 'SMSController@index')->where('any', '.*');
-
