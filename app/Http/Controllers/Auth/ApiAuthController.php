@@ -40,7 +40,7 @@ class ApiAuthController extends Controller
         ]);
         if ($validator->fails())
         {
-            return response(['errors'=>$validator->errors()->all()], 422);
+            return response(['errors' => $validator->errors()->all()], 422);
         }
         $user = User::where('email', $request->email)->first();
         if ($user) {

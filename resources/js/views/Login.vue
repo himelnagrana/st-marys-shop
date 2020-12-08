@@ -80,6 +80,7 @@ export default {
         this.form.password_confirmation = this.form.password;
         UserService.login(this.form)
             .then((response) => {
+                console.log(response);
                 LocalStorageUtil.setItem(response.token, this.form.rememberMe);
                 this.$router.push('/products');
             })
